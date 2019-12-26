@@ -6,10 +6,16 @@
 </head>
 <body>
     <br>
+    <!--
+        set定义的变量在整个模板范围内都有效，
+        with关键字在定义变量并赋值的同时，
+        限制了with定义变量的作用范围
+     -->
         {% set telephone = '138888888' %}
         {% set nav=[('index.html','index'),('product.html','product')] %}
     {{ telephone }}<br/>
     {{ nav }}<br/>
+    <!-- with定义的变量的作用范围在 ... 和 ... 之间 ，在模板的其他地方，引用此变量无效 -->
     {% with pass = 60 %}
     {{ pass }}
     {% endwith %}

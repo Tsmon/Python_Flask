@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {#      另一种写法
+        <script type="text/javascript" src="static/js/jquery-3.3.1/jquery-3.3.1.js"></script>
+    #}
+    <script src="{{ url_for('static',filename='js/jquery-3.3.1/jquery-3.3.1.js') }}" ></script>
+    {#  测试jquery是否加载 #}
+    <script>
+        if(jQuery){
+            alert('jQuery已加载!');
+        }else{
+            alert('jQuery未加载！');
+        }
+    </script>
+    <!--    加载css文件 -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/car.css') }}">
+    <!-- 加载图片文件 -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='images/car.jpg') }}">
+</head>
+<body>
+
+</body>
+</html>

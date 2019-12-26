@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}产品列表页{% endblock %}
+{% block body %}
+    <h4>这是产品列表页的内容！</h4>
+    {# 如果想要在一个block中调用其他block中的代码，可以通过self.其他block名称()实现 #}
+    <h4>{{ self.title() }}</h4>
+{% endblock %}
