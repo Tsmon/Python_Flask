@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .line{
+            display: inline-block;
+            height:1px;
+            width:100%;
+            background:#00CCFF;
+            overflow:hidden;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <meta charset="UTF-8">
+    {% for goods in goods %}
+        <li style="list-style-type:none">
+            {{ goods.name }}<span class="{{ loop.index | index_class }}"></span>
+        <!-- 当前迭代的索引通过过滤器index_class来过滤 -->
+        </li>
+    {% endfor %}
+</body>
+</html>

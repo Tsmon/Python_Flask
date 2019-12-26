@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>宏的定义和使用</title>
+</head>
+<body>
+    {# 宏的定义 #}
+    {% macro input(name,type='text',value='') -%}
+        <input type="{{ type }}" name="{{ name }}" value="{{ value }}">
+    {%- endmacro %}
+    {# 宏的使用 #}
+    <div style="color:#0000FF">
+        <p>用户名：{{ input('username') }}</p>
+        <p>密码：{{ input('password',type='password') }}</p>
+        <p>登录：{{ input('submit',type='submit',value='登录') }}</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+{# 定义宏，使用时只需导入即可！ #}
+{% macro input(name,type='text',value='') -%}
+    <input type="{{ type }}" name="{{ name }}" value="{{ value|e }}">
+{%- endmacro %}

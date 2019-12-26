@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>宏的导入</title>
+</head>
+<body>
+  <!--  {% import 'form.html' as form %} -->
+    {% from 'form.html' import input %}
+    <div style="color:#0000FF">
+        <p>用户名：{{ form.input('username') }}</p>
+        <p>密码：{{ form.input('password',type='password') }}</p>
+        <p>登录：{{ form.input('submit',type='submit',value='登录') }}</p>
+    </div>
+
+</body>
+</html>
