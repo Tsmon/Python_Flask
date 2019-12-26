@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% if name == 1 %}      <!-- 这里是注释部分 -->
+        <h1>恭喜您抽中一等奖！</h1>
+    {% elif name == 2 %}
+        <h1>恭喜您抽中二等奖！</h1>
+    {% else %}
+        <h1>恭喜您抽中三等奖！</h1>
+    {% endif %}
+    {{ name }}
+</body>
+</html>
