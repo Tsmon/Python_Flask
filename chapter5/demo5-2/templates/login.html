@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .div1{
+            height: 180px;
+            width: 380px;
+            border: 1px solid #8A8989;
+            margin: 0 auto;
+        }
+        .input{
+            display: block;
+            width: 350px;
+            height: 40px;
+            margin: 10px auto;
+        }
+        .button{
+            background: #2066C5;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            height: 50px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <form action="login" method="post">
+            {{ form.name(size=16,id='name',class='input') }}
+            {% for e in form.name.errors %}
+                <span style="color:red">
+                    {{ e }}
+                </span>
+            {% endfor %}
+            {{ form.password(size=16,id='password',class='input') }}
+            {% for e in form.password.errors %}
+                <span style="color:red">
+                    {{ e }}
+                </span>
+            {% endfor %}
+            <input type="submit" value="登录" class="input button">
+        </form>
+    </div>
+</body>
+</html>
